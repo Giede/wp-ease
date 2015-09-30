@@ -61,7 +61,7 @@ add_filter( 'automatic_updater_disabled', '__return_true' );
 add_filter( 'xmlrpc_enabled', '__return_false' );
 
 //Disable phoning home some plugins like E.T.
-//HINT: [BackWPup](https://marketpress.de/product/backwpup-pro/) WILL NOT WORK WITH THIS OPTION!!!!!!!!!!!!!!!!!!!!!
+//HINT: [BackWPup](https://marketpress.de/product/backwpup-pro/) WILL NOT WORK WITH THE FOLLOWING OPTION!!!!!!!!!
 /*add_filter( 'pre_http_request', '__return_true', 100 );*/
 
 // change mail name and mail from to your WordPress settings.
