@@ -64,17 +64,19 @@ add_filter( 'xmlrpc_enabled', '__return_false' );
 //HINT: BACKWPUP WILL NOT WORK WITH THIS OPTION!!!!!!!!!!!!!!!!!!!!!!!!!!
 /*add_filter( 'pre_http_request', '__return_true', 100 );*/
 
-// change mail name and mail from.
-//TODO: get values from WordPress settings
+// change mail name and mail from to your WordPress settings.
 add_filter('wp_mail_from', 'new_mail_from');
 add_filter('wp_mail_from_name', 'new_mail_from_name');
 
+$email = get_bloginfo('admin_email');
+$emailfrom = get_bloginfo('name') . ('description');
+
 function new_mail_from($old) {
-    return 'no-reply@domain.com';
+    return $email;
 }
 
 function new_mail_from_name($old) {
-    return 'domain.com';
+    return $emailfrom;
 }
 
 class WP_HTML_Compression {
