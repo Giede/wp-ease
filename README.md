@@ -16,9 +16,9 @@ Easing settings of your WordPress site in this simple and small plugin.
 
 **Remember: The most expensive backup is the one you never did! And please test your backups!**
 
-**Made by [Inpsyde](http://inpsyde.com) &middot; We love WordPress**
+**Made by [ixcellent](http://ixcellent.de) &middot; We love WordPress**
 
-Have a look at our other premium plugins at [MarketPress.com](http://marketpress.com).
+Have a look at other premium plugins from our partner [MarketPress.com](http://marketpress.com).
 
 ## Requirements
 * WordPress 3.4 and PHP 5.2.6 required!
