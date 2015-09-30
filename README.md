@@ -9,6 +9,9 @@ Easing settings of your WordPress site in this simple and small plugin.
 * Change default email-address wordpress@... to mail address saved in your settings
 * Change default email from name to your website Name and Description
 * Antispambot: [email]yourmail@domain.com[/email]
+* Disable update emails
+* Disable automatic WordPress updates
+* Disable XML-RPC
 
 
 **Remember: The most expensive backup is the one you never did! And please test your backups!**
