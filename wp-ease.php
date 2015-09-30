@@ -175,7 +175,13 @@ function wp_html_compression_start() {
 }
 add_action('get_header', 'wp_html_compression_start');
 
-/* USEFUL SHORTCODES*/
+/* Disable editors for theme and plugin files in WordPress backend */
+function disable_backend_editor_action() {
+    define('DISALLOW_FILE_EDIT', TRUE);
+}
+add_action('init','disable_backend_editor_action');
+
+/* USEFUL SHORTCODES */
 
 //Use antispambot and create shortcode to hide mail-adresses within content
 function hide_email_shortcode( $atts , $content = null ) {

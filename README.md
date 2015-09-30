@@ -12,6 +12,7 @@ Easing settings of your WordPress site in this simple and small plugin.
 * Disable update emails
 * Disable automatic WordPress updates
 * Disable XML-RPC
+* Disable editors for theme and plugin files in WordPress backend
 
 
 **Remember: The most expensive backup is the one you never did! And please test your backups!**
