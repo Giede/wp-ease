@@ -33,7 +33,7 @@
 
 // Remove unused header information and links
 add_action('init', 'removeheadlinks');
-function remheadlink() {
+function removeheadlinks() {
     remove_action('wp_head',	'rsd_link');
     remove_action('wp_head',	'wp_generator');
     remove_action('wp_head',	'index_rel_link');
