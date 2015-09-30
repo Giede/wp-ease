@@ -14,7 +14,7 @@
  */
 
 /**
- *	Copyright (C) 2012-2015 ixcellent (email: info@iixcellent.de)
+ *	Copyright (C) 2012-2015 ixcellent (email: info@ixcellent.de)
  *
  *	This program is free software; you can redistribute it and/or
  *	modify it under the terms of the GNU General Public License
@@ -175,7 +175,6 @@ function wp_html_compression_start() {
 }
 add_action('get_header', 'wp_html_compression_start');
 
-
 /* USEFUL SHORTCODES*/
 
 //Use antispambot and create shortcode to hide mail-adresses within content
@@ -186,7 +185,6 @@ function hide_email_shortcode( $atts , $content = null ) {
 
     return '<a href="mailto:' . antispambot( $content ) . '">' . antispambot( $content ) . '</a>';
 }
-
 add_shortcode( 'email', 'hide_email_shortcode' );
 
 ?>
