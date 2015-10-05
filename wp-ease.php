@@ -68,14 +68,13 @@ add_filter( 'xmlrpc_enabled', '__return_false' );
 add_filter('wp_mail_from', 'new_mail_from');
 add_filter('wp_mail_from_name', 'new_mail_from_name');
 
-$email = get_bloginfo('admin_email');
-$emailfrom = get_bloginfo('name') . ('description');
-
 function new_mail_from($old) {
+    $email = get_bloginfo('admin_email');
     return $email;
 }
 
 function new_mail_from_name($old) {
+    $emailfrom = get_bloginfo('name') . " " . get_bloginfo('description');
     return $emailfrom;
 }
 
