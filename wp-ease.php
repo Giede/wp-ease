@@ -31,7 +31,7 @@
  *	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-// Remove unused header information and links
+/* Remove unused header information and links */
 add_action('init', 'removeheadlinks');
 function removeheadlinks() {
     remove_action( 'wp_head', 'rsd_link');
@@ -51,20 +51,20 @@ function removeheadlinks() {
     remove_action( 'admin_print_styles', 'print_emoji_styles' );
 }
 
-// Disable update emails
+/* Disable update emails */
 add_filter( 'auto_core_update_send_email', '__return_false' );
 
-// Disable automatic updates
+/* Disable automatic updates */
 add_filter( 'automatic_updater_disabled', '__return_true' );
 
-// Disable XML-RPC
+/* Disable XML-RPC */
 add_filter( 'xmlrpc_enabled', '__return_false' );
 
-//Disable phoning home some plugins like E.T.
-//HINT: [BackWPup](https://marketpress.de/product/backwpup-pro/) WILL NOT WORK WITH THE FOLLOWING OPTION!!!!!!!!!
-/*add_filter( 'pre_http_request', '__return_true', 100 );*/
+/* Disable phoning home some plugins like E.T. */
+/* HINT: [BackWPup](https://marketpress.de/product/backwpup-pro/) WILL NOT WORK WITH THE FOLLOWING OPTION!!!!!! */
+/* add_filter( 'pre_http_request', '__return_true', 100 ); */
 
-// change mail name and mail from to your WordPress settings.
+/* change mail name and mail from to your WordPress settings. */
 add_filter('wp_mail_from', 'new_mail_from');
 add_filter('wp_mail_from_name', 'new_mail_from_name');
 
@@ -78,6 +78,7 @@ function new_mail_from_name($old) {
     return $emailfrom;
 }
 
+/* activate WordPress HTML compression for faster parsing HTML */
 class WP_HTML_Compression {
     protected $compress_css = true;
     protected $compress_js = true;
@@ -182,7 +183,7 @@ add_action('init','disable_backend_editor_action');
 
 /* USEFUL SHORTCODES */
 
-//Use antispambot and create shortcode to hide mail-adresses within content
+/* Use antispambot and create shortcode to hide mail-adresses within content */
 function hide_email_shortcode( $atts , $content = null ) {
     if ( ! is_email( $content ) ) {
         return;
